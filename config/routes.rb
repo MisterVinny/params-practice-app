@@ -1,3 +1,5 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+  # both routes assume variable passed as :query_name
+  get "/query_caps" => "parameters#all_caps"
+  get "/segment_caps/:query_name" => "parameters#all_caps"
 end
